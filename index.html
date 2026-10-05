@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WRS Practice — 3×3 Single World Records</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="cube-bg" aria-hidden="true">
+    <div class="cube-bg__grid"></div>
+    <div class="cube-bg__orb cube-bg__orb--1"></div>
+    <div class="cube-bg__orb cube-bg__orb--2"></div>
+    <div class="cube-bg__orb cube-bg__orb--3"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="logo">
+        <style>
+  .logo-cube-svg {
+    margin-right: 10px;
+    display: block;
+    transform: rotate(-12deg);
+    /* Добавляем плавную пружинистую анимацию (эффект дорогого интерфейса) */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  /* Когда наводим мышку на весь логотип (ссылку) — анимируем кубик */
+  .logo:hover .logo-cube-svg {
+    transform: rotate(0deg) scale(1.15); /* Выпрямляется и становится чуть больше */
+  }
+</style>
+
+<svg class="logo-cube-svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Верхний ряд -->
+  <rect x="1" y="1" width="7" height="7" rx="1.5" fill="#ef4444"/>
+  <rect x="10" y="1" width="7" height="7" rx="1.5" fill="#f97316"/>
+  <rect x="19" y="1" width="7" height="7" rx="1.5" fill="#3b82f6"/>
+  
+  <!-- Средний ряд -->
+  <rect x="1" y="10" width="7" height="7" rx="1.5" fill="#eab308"/>
+  <rect x="10" y="10" width="7" height="7" rx="1.5" fill="#f8fafc"/>
+  <rect x="19" y="10" width="7" height="7" rx="1.5" fill="#10b981"/>
+  
+  <!-- Нижний ряд -->
+  <rect x="1" y="19" width="7" height="7" rx="1.5" fill="#3b82f6"/>
+  <rect x="10" y="19" width="7" height="7" rx="1.5" fill="#ef4444"/>
+  <rect x="19" y="19" width="7" height="7" rx="1.5" fill="#eab308"/>
+</svg>
+        <span class="logo__text">WRS<span class="logo__accent">Practice</span></span>
+      </a>
+      <nav class="site-nav">
+        <span class="site-nav__badge">3×3 Single</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar sidebar--left">
+      <div class="sidebar-card">
+        <p class="sidebar-card__label">Did you know?</p>
+        <p class="sidebar-card__text">The 3×3 has 43 quintillion possible scrambles — yet every official solve uses the same TNoodle algorithm to generate them fairly.</p>
+      </div>
+      <div class="sidebar-card sidebar-card--muted">
+        <p class="sidebar-card__label">WCA format</p>
+        <p class="sidebar-card__text">Inspection time is capped at 15 seconds. The timer starts when you lift your hands; it stops on release after full alignment.</p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="page-heading">
+        <h1>World Records</h1>
+        <p class="page-heading__sub">Latest 10 official 3×3 single solves — newest first</p>
+      </div>
+
+      <ol class="records-list">
+        <li class="records-list__item records-list__item--filled">
+          <a href="record/1.html" class="record-card record-card--active">
+            <span class="record-card__rank">#1</span>
+            <span class="record-card__flag" title="Poland" aria-label="Poland">
+              <img src="https://flagcdn.com/w40/pl.png" alt="" width="28" height="21" loading="lazy">
+            </span>
+            <span class="record-card__info">
+              <span class="record-card__name">Teodor Zajder</span>
+              <span class="record-card__date">Feb 07, 2026</span>
+            </span>
+            <span class="record-card__time">2.76</span>
+            <span class="record-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+        <li class="records-list__item records-list__item--empty">
+          <span class="record-card record-card--placeholder">
+            <span class="record-card__rank">#2</span>
+            <span class="record-card__empty-label">—</span>
+          </span>
+        </li>
+        <li class="records-list__item records-list__item--empty">
+          <span class="record-card record-card--placeholder">
+            <span class="record-card__rank">#3</span>
+            <span class="record-card__empty-label">—</span>
+          </span>
+        </li>
+        <li class="records-list__item records-list__item--empty">
+          <span class="record-card record-card--placeholder">
+            <span class="record-card__rank">#4</span>
+            <span class="record-card__empty-label">—</span>
+          </span>
+        </li>
+        <li class="records-list__item records-list__item--empty">
+          <span class="record-card record-card--placeholder">
+            <span class="record-card__rank">#5</span>
+            <span class="record-card__empty-label">—</span>
+          </span>
+        </li>
+        <li class="records-list__item records-list__item--empty">
+          <span class="record-card record-card--placeholder">
+            <span class="record-card__rank">#6</span>
+            <span class="record-card__empty-label">—</span>
+          </span>
+        </li>
+        <li class="records-list__item records-list__item--empty">
+          <span class="record-card record-card--placeholder">
+            <span class="record-card__rank">#7</span>
+            <span class="record-card__empty-label">—</span>
+          </span>
+        </li>
+        <li class="records-list__item records-list__item--empty">
+          <span class="record-card record-card--placeholder">
+            <span class="record-card__rank">#8</span>
+            <span class="record-card__empty-label">—</span>
+          </span>
+        </li>
+        <li class="records-list__item records-list__item--empty">
+          <span class="record-card record-card--placeholder">
+            <span class="record-card__rank">#9</span>
+            <span class="record-card__empty-label">—</span>
+          </span>
+        </li>
+        <li class="records-list__item records-list__item--empty">
+          <span class="record-card record-card--placeholder">
+            <span class="record-card__rank">#10</span>
+            <span class="record-card__empty-label">—</span>
+          </span>
+        </li>
+      </ol>
+    </section>
+
+    <aside class="sidebar sidebar--right">
+      <div class="sidebar-card">
+        <p class="sidebar-card__label">Sub-3 barrier</p>
+        <p class="sidebar-card__text">For years, three seconds was considered the human ceiling. The first official solve under that mark rewrote what speedcubers thought was possible.</p>
+      </div>
+      <div class="sidebar-card sidebar-card--muted">
+        <p class="sidebar-card__label">Move count</p>
+        <p class="sidebar-card__text">Elite singles often land between 25–35 moves. Efficiency — not just raw turning speed — separates a good solve from a world record.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>WRS Practice — unofficial fan project. Record data sourced from WCA-approved competitions.</p>
+      <p class="site-footer__hint">Press <kbd>Space</kbd> on any record page to try the scramble yourself.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

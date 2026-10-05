@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#1 — Teodor Zajder 2.76 | WRS Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="cube-bg" aria-hidden="true">
+    <div class="cube-bg__grid"></div>
+    <div class="cube-bg__orb cube-bg__orb--1"></div>
+    <div class="cube-bg__orb cube-bg__orb--2"></div>
+    <div class="cube-bg__orb cube-bg__orb--3"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="logo">
+        <style>
+  .logo-cube-svg {
+    margin-right: 10px;
+    display: block;
+    transform: rotate(-12deg);
+    /* Добавляем плавную пружинистую анимацию (эффект дорогого интерфейса) */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  /* Когда наводим мышку на весь логотип (ссылку) — анимируем кубик */
+  .logo:hover .logo-cube-svg {
+    transform: rotate(0deg) scale(1.15); /* Выпрямляется и становится чуть больше */
+  }
+</style>
+
+<svg class="logo-cube-svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Верхний ряд -->
+  <rect x="1" y="1" width="7" height="7" rx="1.5" fill="#ef4444"/>
+  <rect x="10" y="1" width="7" height="7" rx="1.5" fill="#f97316"/>
+  <rect x="19" y="1" width="7" height="7" rx="1.5" fill="#3b82f6"/>
+  
+  <!-- Средний ряд -->
+  <rect x="1" y="10" width="7" height="7" rx="1.5" fill="#eab308"/>
+  <rect x="10" y="10" width="7" height="7" rx="1.5" fill="#f8fafc"/>
+  <rect x="19" y="10" width="7" height="7" rx="1.5" fill="#10b981"/>
+  
+  <!-- Нижний ряд -->
+  <rect x="1" y="19" width="7" height="7" rx="1.5" fill="#3b82f6"/>
+  <rect x="10" y="19" width="7" height="7" rx="1.5" fill="#ef4444"/>
+  <rect x="19" y="19" width="7" height="7" rx="1.5" fill="#eab308"/>
+</svg>
+        <span class="logo__text">WRS<span class="logo__accent">Practice</span></span>
+      </a>
+      <nav class="site-nav">
+        <a href="../index.html" class="site-nav__back">← All records</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="layout layout--record">
+    <aside class="sidebar sidebar--left">
+      <div class="sidebar-card sidebar-card--record">
+        <p class="sidebar-card__label">Competition</p>
+        <p class="sidebar-card__text">GLS Big Cubes 2026<br>Gdańsk, Poland</p>
+      </div>
+      <div class="sidebar-card sidebar-card--muted">
+        <p class="sidebar-card__label">Turns per second</p>
+        <p class="sidebar-card__text">This solve averaged ~10.5 TPS across 29 moves — blistering pace with almost no pauses.</p>
+      </div>
+      <div class="sidebar-card sidebar-card--muted">
+        <p class="sidebar-card__label">Method insight</p>
+        <p class="sidebar-card__text">An XXX-cross into efficient F2L, finished with a one-look ZBLL — skipping separate OLL and PLL entirely.</p>
+      </div>
+    </aside>
+
+    <article class="content content--record">
+      <header class="record-header">
+        <span class="record-header__rank">World Record #1</span>
+        <div class="record-header__main">
+          <span class="record-header__flag" title="Poland">
+            <img src="https://flagcdn.com/w80/pl.png" alt="Poland" width="48" height="36" loading="lazy">
+          </span>
+          <div>
+            <h1>Teodor Zajder</h1>
+            <p class="record-header__meta">Feb 07, 2026 · 2.76 seconds</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="video-wrap" style="position: relative; border-radius: 12px; overflow: hidden; cursor: pointer;" onclick="window.open('https://youtu.be/bTDZXzI_Ab8', '_blank')">
+    <img src="https://img.youtube.com/vi/bTDZXzI_Ab8/maxresdefault.jpg" style="width: 100%; display: block;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.85); padding: 14px 24px; border-radius: 8px; color: #fff; font-weight: 600; border: 1px solid rgba(255,255,255,0.2);">
+        ▶ Watch Record on YouTube
+    </div>
+</div>
+
+      <div class="scramble-block">
+        <p class="scramble-block__label">Official scramble</p>
+        <p class="scramble-block__text" id="scramble">L B R2 B' R2 U2 F D R2 U R2 F2 D2 R U B L2</p>
+        <button type="button" class="btn btn--primary" id="try-btn">Try it</button>
+        
+      </div>
+<div class="reconstruction">
+  <h3 class="reconstruction__title">Solve Reconstruction</h3>
+  
+  <div class="recon-timeline">
+    
+    <!-- Этап: Подготовка -->
+    <div class="recon-step">
+      <div class="recon-step__header">
+        <span class="recon-step__name">Initial position</span>
+        <span class="recon-step__badge">Setup</span>
+      </div>
+      <div class="recon-step__moves">x'</div>
+      <p class="recon-step__desc">According to WCA rules, the cube is scrambled with the white face up and the green face facing the solver. Before starting the solve, Teodor performed an x' rotation.</p>
+    </div>
+
+    <!-- Этап 1 -->
+    <div class="recon-step">
+      <div class="recon-step__header">
+        <span class="recon-step__name">1. XXXCross</span>
+        <span class="recon-step__badge">11 Moves</span>
+      </div>
+      <div class="recon-step__moves">r' U F U' r U' r' U2 r' U r</div>
+      <p class="recon-step__desc">During the inspection phase, Teodor brilliantly calculated how to preserve the elements already assembled and complete nearly 75% of the first two layers in 11 moves.</p>
+    </div>
+
+    <!-- Этап 2 -->
+    <div class="recon-step">
+      <div class="recon-step__header">
+        <span class="recon-step__name">2. F2L 4</span>
+        <span class="recon-step__badge">Setup Pair</span>
+      </div>
+      <div class="recon-step__moves">R U2' R2' U' R U R U2' R'</div>
+      <p class="recon-step__desc">He chose a way to drive the pair in so that the cube would assemble on the very next move.</p>
+    </div>
+
+    <!-- Этап 3 -->
+    <div class="recon-step">
+      <div class="recon-step__header">
+        <span class="recon-step__name">3. ZBLL</span>
+        <span class="recon-step__badge">1-Look Last Layer</span>
+      </div>
+      <div class="recon-step__moves">U' F' r U R' U' r' F R</div>
+      <p class="recon-step__desc">Instead of performing OLL and PLL separately, he used the ZBLL algorithm, which completed the cube.</p>
+    </div>
+
+  </div>
+</div>
+      <section class="record-story">
+        <h2>About this solve</h2>
+        <p>
+          Nine-year-old Teodor Zajder from Poland shattered the three-second barrier at GLS Big Cubes 2026 in Gdańsk — becoming the first person in history to officially solve a 3×3 in under three seconds. The crowd erupted the moment the timer stopped at 2.76.
+        </p>
+        <p>
+          He noticed during inspection that the scramble was unusually generous, planning much of the solution before his hands ever touched the cube. The solve itself took only 29 moves, executed at over 10 turns per second.
+        </p>
+        <p>
+          Teodor had already made headlines in 2023 when he set the 2×2 world record at age seven. With 60+ competitions and dozens of gold medals to his name, he dethroned Xuanyi Geng's 3.05 from April 2025 — not by a hundredth, but by nearly three tenths.
+        </p>
+        <div class="record-meta-grid">
+          <div class="record-meta-grid__item">
+            <span class="record-meta-grid__key">Cube used</span>
+            <span class="record-meta-grid__val">GAN 12 M Maglev — Teodor Zajder Signature</span>
+          </div>
+          <div class="record-meta-grid__item">
+            <span class="record-meta-grid__key">Move count</span>
+            <span class="record-meta-grid__val">29 STM</span>
+          </div>
+          <div class="record-meta-grid__item">
+            <span class="record-meta-grid__key">Previous WR</span>
+            <span class="record-meta-grid__val">3.05 — Xuanyi Geng</span>
+          </div>
+          <div class="record-meta-grid__item">
+            <span class="record-meta-grid__key">Nation</span>
+            <span class="record-meta-grid__val"><img src="https://flagcdn.com/w20/pl.png" alt="" width="20" height="15" class="inline-flag" loading="lazy"> Poland</span>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <aside class="sidebar sidebar--right">
+      <div class="sidebar-card sidebar-card--record">
+        <p class="sidebar-card__label">Historic first</p>
+        <p class="sidebar-card__text">Before this solve, sub-3 was a hypothetical milestone. Now it's an official number in the WCA database.</p>
+      </div>
+      <div class="sidebar-card sidebar-card--muted">
+        <p class="sidebar-card__label">Inspection</p>
+        <p class="sidebar-card__text">Teodor used nearly the full 15-second inspection window — a sign he saw something special in the scramble early on.</p>
+      </div>
+      <div class="sidebar-card sidebar-card--muted">
+        <p class="sidebar-card__label">Fun fact</p>
+        <p class="sidebar-card__text">At 2.76 seconds, you blink twice and the solve is already over. Literally — a blink takes about 0.3 s.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>WRS Practice — unofficial fan project. Record data sourced from WCA-approved competitions.</p>
+    </div>
+  </footer>
+
+  <!-- Timer Modal -->
+  <div class="modal" id="timer-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+      <button type="button" class="modal__close" data-close-modal aria-label="Close">&times;</button>
+      <h2 class="modal__title" id="modal-title">Your attempt</h2>
+      <p class="modal__scramble-label">Scramble</p>
+      <p class="modal__scramble" id="modal-scramble"></p>
+
+      <div class="timer-display" id="timer-display">
+        <span class="timer-display__value" id="timer-value">0.00</span>
+        <span class="timer-display__status" id="timer-status">Hold Space to ready</span>
+      </div>
+
+      
+
+      <div class="timer-result" id="timer-result" hidden>
+        <div class="timer-result__row">
+          <span class="timer-result__label">Your time</span>
+          <span class="timer-result__time" id="your-time">—</span>
+        </div>
+        <div class="timer-result__row timer-result__row--wr">
+          <span class="timer-result__label">World record</span>
+          <span class="timer-result__time timer-result__time--wr">2.76</span>
+        </div>
+        
+      </div>
+
+      <p class="modal__hint"><kbd>Space</kbd> to start / stop · <kbd>Esc</kbd> to close</p>
+    </div>
+  </div>
+
+  <script>
+    window.RECORD_DATA = {
+      scramble: "L B R2 B' R2 U2 F D R2 U R2 F2 D2 R U B L2",
+      worldRecord: 2.76
+    };
+  </script>
+  <script src="../js/main.js"></script>
+  <script src="../js/timer.js"></script>
+</body>
+</html>
